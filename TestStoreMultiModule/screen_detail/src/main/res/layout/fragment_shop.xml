@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_cpu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cpu"
+                android:fontFamily="@font/mark_pro_four"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#635F5F"
+                android:textSize="11sp"
+                tools:text="Exynos 990" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/data"
+                android:fontFamily="@font/mark_pro_four"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#635F5F"
+                android:textSize="11sp"
+                tools:text="Exynos 990" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ram"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/camera"
+                android:fontFamily="@font/mark_pro_four"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#635F5F"
+                android:textSize="11sp"
+                tools:text="Exynos 990" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_data" />
+
+            <TextView
+                android:id="@+id/ram"
+                android:fontFamily="@font/mark_pro_four"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#635F5F"
+                android:textSize="11sp"
+                tools:text="Exynos 990" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/mark_pro_five"
+        android:text="@string/select_color_and_capacity"
+        android:textColor="@color/new_black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/choice_color"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/color_one"
+                android:layout_width="55dp"
+                android:layout_height="56dp"
+                android:button="@drawable/button_select"
+                android:buttonTint="@color/new_white"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/color_two"
+                android:layout_width="55dp"
+                android:layout_height="56dp"
+                android:button="@drawable/button_select"
+                android:buttonTint="@color/new_white" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/choice_memory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/memory_one"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginEnd="19dp"
+                android:background="@drawable/bg_capacity_select"
+                android:button="@null"
+                android:paddingHorizontal="15dp"
+                android:textColor="@drawable/text_select"
+                android:checked="true"
+                android:fontFamily="@font/mark_pro_seven"
+                android:text="@string/_250gb"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/memory_two"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_capacity_select"
+                android:button="@null"
+                android:fontFamily="@font/mark_pro_seven"
+                android:paddingHorizontal="15dp"
+                android:textColor="@drawable/text_select"
+                android:text="@string/_150gb"
+                android:textSize="13sp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+</LinearLayout>

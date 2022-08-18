@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "TestStorMultiMdule"
+include ':app'
+include ':stor_api'
+include ':screen_main'
+include ':di'
+include ':core'
+include ':navigation'
+include ':screen_basket'
+include ':screen_detail'

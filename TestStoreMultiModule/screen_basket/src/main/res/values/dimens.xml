@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_screen_for_basket">350dp</dimen>
+    <dimen name="text_size_mid">15sp</dimen>
+    <dimen name="text_size_big">20sp</dimen>
+    <dimen name="text_size_very_big">35sp</dimen>
+    <dimen name="location_size">37dp</dimen>
+    <dimen name="product_screen_size">88dp</dimen>
+    <dimen name="radius">10dp</dimen>
+    <dimen name="product_info_size">153dp</dimen>
+    <dimen name="five">50dp</dimen>
+    <dimen name="size_button_one">26dp</dimen>
+    <dimen name="size_button_two">68dp</dimen>
+    <dimen name="size_18">18sp</dimen>
+</resources>

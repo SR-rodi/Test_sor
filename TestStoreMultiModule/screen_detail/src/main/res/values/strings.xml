@@ -1,0 +1,10 @@
+<resources>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_color_and_capacity">Select color and capacity</string>
+    <string name="_250gb">250gb</string>
+    <string name="_150gb">150gb</string>
+    <string name="product_details">Product Details</string>
+    <string name="add_to_cart">Add to Cart</string>
+</resources>

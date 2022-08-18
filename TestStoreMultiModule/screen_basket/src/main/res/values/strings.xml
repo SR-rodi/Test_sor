@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="my_cart">My_cart</string>
+    <string name="add_address">Add address</string>
+    <string name="checkout">Checkout</string>
+    <string name="total">Total</string>
+    <string name="delivery">Delivery</string>
+    <string name="_1">1</string>
+</resources>
