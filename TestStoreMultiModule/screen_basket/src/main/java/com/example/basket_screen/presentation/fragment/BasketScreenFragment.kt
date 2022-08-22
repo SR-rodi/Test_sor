@@ -15,11 +15,10 @@ import com.example.basket_screen.databinding.FragmentBasketScreenBinding
 import com.example.core.DOLLAR
 import com.example.core.TRANSITION_NAME
 import com.example.navigation.createExtras
-import com.example.basket_screen.presentation.view_model.BasketViewModel
+import com.example.basket_screen.presentation.viewModel.BasketViewModel
 import com.example.core.BaseFragment
 import com.example.basket_screen.presentation.adapter.BasketAdapter
-import com.example.basket_screen.presentation.adapter.BasketAdapterDelegate
-import com.example.basket_screen.presentation.view_model.BasketViewModelFactory
+import com.example.basket_screen.presentation.viewModel.BasketViewModelFactory
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -65,7 +64,7 @@ class BasketScreenFragment :
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.isBasket.collect {
                 val a = it.listBasket
-                binding.recyclerBasket.adapter = BasketAdapterDelegate(it.listBasket)
+                binding.recyclerBasket.adapter = BasketAdapter(it.listBasket)
                 binding.total.text = DOLLAR + it.total.toString()
                 binding.delivery.text = it.delivery
             }

@@ -1,13 +1,12 @@
-package com.example.basket_screen.presentation.view_model
+package com.example.basket_screen.presentation.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.basket_screen.repository.BasketRepository
-import com.example.basket_screen.repository.BasketRepositoryImpl
 import javax.inject.Inject
 
 class BasketViewModelFactory @Inject constructor(
-    private val repository: BasketRepositoryImpl
+    private val repository: BasketRepository
 ) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

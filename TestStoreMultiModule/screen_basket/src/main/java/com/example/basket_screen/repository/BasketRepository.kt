@@ -1,8 +1,11 @@
 package com.example.basket_screen.repository
 
-import com.example.core.dto.basketscreen.BasketDto
-import com.example.core.dto.basketscreen.BasketPhoneDto
+import com.example.teststore.network.api.StoreApi
+import javax.inject.Inject
 
-interface BasketRepository {
-    suspend fun getBasket():BasketPhoneDto
+class BasketRepository @Inject constructor(private val storeApi: StoreApi)
+   {
+
+    suspend fun getBasket() = storeApi.getBasketIndo()
+
 }

@@ -109,6 +109,9 @@
         <entry key="..\:/TestStorMultiMdule/screen_main/src/main/res/layout/item_best_seller.xml" value="0.75" />
         <entry key="..\:/TestStorMultiMdule/screen_main/src/main/res/layout/item_catedory_new.xml" value="0.67" />
         <entry key="..\:/TestStorMultiMdule/screen_main/src/main/res/layout/item_hot_seles.xml" value="0.33" />
+        <entry key="..\:/Test_sor/TestStoreMultiModule/screen_basket/src/main/res/drawable/line_.xml" value="0.2625" />
+        <entry key="..\:/Test_sor/TestStoreMultiModule/screen_basket/src/main/res/layout/fragment_basket_screen.xml" value="0.5" />
+        <entry key="..\:/Test_sor/TestStoreMultiModule/screen_basket/src/main/res/layout/item_basket.xml" value="0.17119565217391305" />
       </map>
     </option>
   </component>

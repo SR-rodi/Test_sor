@@ -13,16 +13,15 @@ import androidx.lifecycle.get
 import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
-import com.example.presentation.adapter.DetailAdapter
 import com.example.presentation.adapter.DetailInfoAdapter
 import com.example.core.BaseFragment
 import com.example.core.DOLLAR
 import com.example.core.TRANSITION_NAME
 import com.example.di.DetailComponentViewModel
 import com.example.navigation.createExtras
-import com.example.presentation.adapter.DetailAdapterDelegate
+import com.example.presentation.adapter.DetailAdapter
 import com.example.presentation.factory.DetailViewModelFactory
-import com.example.presentation.view_model.DetailScreenViewModel
+import com.example.presentation.viewModel.DetailScreenViewModel
 import com.example.screen_detail.R
 import com.example.screen_detail.databinding.FragmentDetailScreenBinding
 import com.google.android.material.tabs.TabLayoutMediator
@@ -101,7 +100,7 @@ class DetailScreenFragment :
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             viewModel.isInfo.collect { phone ->
                 binding.apply {
-                    viewPagerDetail.adapter = DetailAdapterDelegate(phone.images)
+                    viewPagerDetail.adapter = DetailAdapter(phone.images)
                     viewPagerInfo.adapter = DetailInfoAdapter(this@DetailScreenFragment, phone)
                     buttonAdd.text = "Add to Card  " + DOLLAR + phone.price.toString()
                     name.text = phone.title

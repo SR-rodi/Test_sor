@@ -1,7 +1,7 @@
-package com.example.basket_screen.presentation.view_model
+package com.example.basket_screen.presentation.viewModel
 
 import androidx.lifecycle.viewModelScope
-import com.example.basket_screen.repository.BasketRepositoryImpl
+import com.example.basket_screen.repository.BasketRepository
 import com.example.core.BaseViewModel
 import com.example.core.dto.basketscreen.BasketPhoneDto
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 
 class BasketViewModel(
-    private val repository: BasketRepositoryImpl
+    private val repository: BasketRepository
 ) : BaseViewModel() {
 
     private var _isBasket = MutableSharedFlow<BasketPhoneDto>()

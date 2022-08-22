@@ -3,25 +3,20 @@ package com.example.main_screen.presentation.fragment
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.ProgressBar
-import android.widget.Toast
-import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.PagerSnapHelper
 import com.example.core.BaseFragment
-import com.example.main_screen.di.MaineComponentViewModel
 import com.example.main_screen.databinding.FragmentPhoneBinding
+import com.example.main_screen.di.MaineComponentViewModel
 import com.example.main_screen.presentation.adapters.bestseller.BestSellerAdapter
 import com.example.main_screen.presentation.adapters.hotsales.HotSalesAdapter
-import com.example.main_screen.presentation.viewmodel.PhoneViewModel
 import com.example.main_screen.presentation.factory.PhoneViewModelFactory
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.example.main_screen.presentation.viewmodel.PhoneViewModel
 import javax.inject.Inject
 
 class PhoneFragment(private val onClick: () -> Unit) : BaseFragment<FragmentPhoneBinding>() {
@@ -67,14 +62,14 @@ class PhoneFragment(private val onClick: () -> Unit) : BaseFragment<FragmentPhon
     private fun transferToAdapterBestSellers() =
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             viewModel.isBestSeller.collect {
-                bestSellerAdapter.submitList(it)
+                bestSellerAdapter.items = it
             }
         }
 
     private fun transferToAdapterHotSales() =
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             viewModel.isHotSales.collect {
-                hotSalesAdapter.submitList(it)
+                hotSalesAdapter.items = it
             }
         }
 }

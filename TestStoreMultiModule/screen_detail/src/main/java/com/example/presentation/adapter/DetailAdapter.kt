@@ -1,23 +1,19 @@
 package com.example.presentation.adapter
 
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+import android.annotation.SuppressLint
+import com.bumptech.glide.Glide
+import com.example.core.DOLLAR
+import com.example.core.dto.basketscreen.BasketDto
+import com.example.core.loadingGlide
 import com.example.screen_detail.databinding.ItemDetailBinding
+import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
+import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
-class DetailAdapter(
-    private val detailImage: List<String>
-) : RecyclerView.Adapter<DetailViewHolder>() {
+class DetailAdapter(detailImage: List<String>) :
+    ListDelegationAdapter<List<String>>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = DetailViewHolder(
-        ItemDetailBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-    )
-
-    override fun onBindViewHolder(holder: DetailViewHolder, position: Int) {
-        val item = detailImage[position]
-        holder.bindInfo(item)
+    init {
+        delegatesManager.addDelegate(detailAdapterDelegate())
+        setItems(detailImage)
     }
-
-    override fun getItemCount() = detailImage.size
 }
-
