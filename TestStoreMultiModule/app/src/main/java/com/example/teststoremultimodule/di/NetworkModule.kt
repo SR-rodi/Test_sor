@@ -1,6 +1,5 @@
 package com.example.teststoremultimodule.di
 
-import com.example.teststore.network.api.StoreApi
 import com.example.teststore.network.api.storeApi
 import dagger.Module
 import dagger.Provides
@@ -9,8 +8,7 @@ import dagger.Provides
 object NetworkModule{
 
     @Provides
-    fun providerStoreService(): StoreApi{
-        return storeApi()
-    }
+    fun providerStoreService()= storeApi()
+
 
 }

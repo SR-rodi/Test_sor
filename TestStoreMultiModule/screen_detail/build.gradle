@@ -38,6 +38,8 @@ android {
 
 dependencies {
 
+    implementation 'com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:4.3.2'
+
     implementation project(":stor_api")
     implementation project(":core")
     implementation project(":navigation")

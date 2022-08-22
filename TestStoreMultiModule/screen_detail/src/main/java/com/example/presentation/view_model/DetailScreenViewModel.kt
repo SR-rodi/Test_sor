@@ -1,7 +1,7 @@
 package com.example.presentation.view_model
 
 import androidx.lifecycle.viewModelScope
-import com.example.core.dto.BaseViewModel
+import com.example.core.BaseViewModel
 import com.example.repository.DetailRepository
 import com.example.core.dto.detailscreen.DetailInfoDto
 import kotlinx.coroutines.flow.*

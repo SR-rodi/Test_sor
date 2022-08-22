@@ -1,7 +1,7 @@
 package com.example.main_screen.presentation.viewmodel
 
 import androidx.lifecycle.viewModelScope
-import com.example.core.dto.BaseViewModel
+import com.example.core.BaseViewModel
 import com.example.core.dto.mainscreen.nesteddto.BestSellerDto
 import com.example.core.dto.mainscreen.nesteddto.HotSaleDto
 import com.example.main_screen.repository.MainRepository

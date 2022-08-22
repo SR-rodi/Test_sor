@@ -20,6 +20,7 @@ import com.example.core.DOLLAR
 import com.example.core.TRANSITION_NAME
 import com.example.di.DetailComponentViewModel
 import com.example.navigation.createExtras
+import com.example.presentation.adapter.DetailAdapterDelegate
 import com.example.presentation.factory.DetailViewModelFactory
 import com.example.presentation.view_model.DetailScreenViewModel
 import com.example.screen_detail.R
@@ -100,7 +101,7 @@ class DetailScreenFragment :
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             viewModel.isInfo.collect { phone ->
                 binding.apply {
-                    viewPagerDetail.adapter = DetailAdapter(phone.images)
+                    viewPagerDetail.adapter = DetailAdapterDelegate(phone.images)
                     viewPagerInfo.adapter = DetailInfoAdapter(this@DetailScreenFragment, phone)
                     buttonAdd.text = "Add to Card  " + DOLLAR + phone.price.toString()
                     name.text = phone.title

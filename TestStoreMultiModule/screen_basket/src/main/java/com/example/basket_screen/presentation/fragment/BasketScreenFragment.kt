@@ -18,7 +18,8 @@ import com.example.navigation.createExtras
 import com.example.basket_screen.presentation.view_model.BasketViewModel
 import com.example.core.BaseFragment
 import com.example.basket_screen.presentation.adapter.BasketAdapter
-import com.example.teststore.presentation.basketscreen.adapter.BasketViewModelFactory
+import com.example.basket_screen.presentation.adapter.BasketAdapterDelegate
+import com.example.basket_screen.presentation.view_model.BasketViewModelFactory
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -46,7 +47,7 @@ class BasketScreenFragment :
 
         isErrorInternet(viewModel.errorInternet)
 
-        isLoading(viewModel.isLoading,binding.progressCircular)
+        isLoading(viewModel.isLoading, binding.progressCircular)
 
         startAnimation()
 
@@ -63,7 +64,8 @@ class BasketScreenFragment :
     private fun bindingInfo() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.isBasket.collect {
-                binding.recyclerBasket.adapter = BasketAdapter(it.listBasket)
+                val a = it.listBasket
+                binding.recyclerBasket.adapter = BasketAdapterDelegate(it.listBasket)
                 binding.total.text = DOLLAR + it.total.toString()
                 binding.delivery.text = it.delivery
             }
