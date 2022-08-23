@@ -14,10 +14,10 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/di" />
             <option value="$PROJECT_DIR$/navigation" />
-            <option value="$PROJECT_DIR$/screen_basket" />
-            <option value="$PROJECT_DIR$/screen_detail" />
-            <option value="$PROJECT_DIR$/screen_main" />
-            <option value="$PROJECT_DIR$/stor_api" />
+            <option value="$PROJECT_DIR$/screenBasket" />
+            <option value="$PROJECT_DIR$/screenDetail" />
+            <option value="$PROJECT_DIR$/screenMain" />
+            <option value="$PROJECT_DIR$/storApi" />
           </set>
         </option>
       </GradleProjectSettings>

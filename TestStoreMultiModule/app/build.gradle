@@ -33,10 +33,10 @@ android {
 }
 
 dependencies {
-    implementation project(":stor_api")
-    implementation project(':screen_main')
-    implementation project(':screen_basket')
-    implementation project(':screen_detail')
+    implementation project(':storApi')
+    implementation project(':screenMain')
+    implementation project(':screenBasket')
+    implementation project(':screenDetail')
     implementation project(":navigation")
 
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.1'
