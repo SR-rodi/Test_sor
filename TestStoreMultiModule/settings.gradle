@@ -14,10 +14,10 @@ dependencyResolutionManagement {
 }
 rootProject.name = "TestStorMultiMdule"
 include ':app'
-include ':storApi'
-include ':screenMain'
+include ':storapi'
+include ':screenmain'
 include ':di'
 include ':core'
 include ':navigation'
-include ':screenBasket'
-include ':screenDetail'
+include ':screenbasket'
+include ':screendetail'

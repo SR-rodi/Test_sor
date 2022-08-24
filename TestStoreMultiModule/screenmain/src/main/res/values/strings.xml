@@ -1,0 +1,40 @@
+<resources>
+    <string name="city_name">Zihuatanejo, Gro</string>
+    <string name="select_category">Select Category</string>
+    <string name="view_all">view all</string>
+    <string name="search">search</string>
+    <string name="explorer">Explorer</string>
+    <string name="hot_sales">Hot sales</string>
+    <string name="see_more">see more</string>
+    <string name="best_seller">Best Seller</string>
+    <string name="filter_options">Filter options</string>
+    <string name="done">Done</string>
+    <string name="brand">Brand</string>
+    <string name="price">Price</string>
+    <string name="size">Size</string>
+    <string name="new_label">New</string>
+    <string name="buy_now">Buy now!</string>
+
+    <string-array name="price">
+        <item>$0-$100</item>
+        <item>$100-$300</item>
+        <item>$300-$500</item>
+        <item>$500-$1000</item>
+        <item>none</item>
+    </string-array>
+
+    <string-array name="size">
+        <item>4.5 to 5.5</item>
+        <item>5.5 to 6.0</item>
+        <item>>6.0</item>
+        <item>none</item>
+    </string-array>
+
+    <string-array name="brand">
+        <item>Samsung</item>
+        <item>Xiaomi</item>
+        <item>Motorola</item>
+        <item>none</item>
+    </string-array>
+
+</resources>
