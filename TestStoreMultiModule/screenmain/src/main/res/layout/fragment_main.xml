@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".presentation.fragment.MainFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/location"
+                android:layout_width="@dimen/button_Width"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:src="@drawable/ic_location"
+                app:layout_constraintBottom_toBottomOf="@+id/city"
+                app:layout_constraintEnd_toStartOf="@+id/city"
+                app:layout_constraintTop_toTopOf="@+id/city" />
+
+            <ImageView
+                android:id="@+id/cite_arrow"
+                android:layout_width="@dimen/button_arrow_width"
+                android:layout_height="@dimen/button_arrow_height"
+                android:layout_marginStart="@dimen/button_arrow_margin"
+                android:src="@drawable/ic_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/city"
+                app:layout_constraintStart_toEndOf="@+id/city"
+                app:layout_constraintTop_toTopOf="@+id/city" />
+
+            <ImageButton
+                android:id="@+id/filter"
+                android:layout_width="@dimen/button_Width"
+                android:layout_height="@dimen/margin_end"
+                android:layout_marginEnd="@dimen/button_filter_end"
+                android:src="@drawable/ic_filter"
+                app:layout_constraintBottom_toBottomOf="@+id/city"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/city" />
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/city_name"
+                android:textColor="@color/new_black"
+                android:textSize="@dimen/text_size_mid"
+                android:fontFamily="@font/mark_pro_five"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/select_category_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:fontFamily="@font/mark_pro_seven"
+                android:layout_marginTop="18dp"
+                android:text="@string/select_category"
+                android:textColor="@color/new_black"
+                android:textSize="@dimen/text_size_big"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/city" />
+
+            <TextView
+                android:id="@+id/view_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="21dp"
+                android:text="@string/view_all"
+                android:textColor="@color/orange"
+                android:fontFamily="@font/mark_pro_five"
+                android:textSize="@dimen/text_size_mid"
+                app:layout_constraintBottom_toBottomOf="@+id/select_category_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/select_category_text" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout_category"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tab_layout_height"
+                android:layout_marginTop="24dp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@+id/select_category_text"
+                app:tabContentStart="@dimen/tab_layout_size_content"
+                app:tabIndicator="@drawable/ic_ellipse"
+                app:tabIndicatorAnimationMode="linear"
+                app:tabIndicatorGravity="top"
+                app:tabMode="scrollable"
+                app:tabRippleColor="@null" />
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="82dp"
+                android:background="@drawable/bg_search"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="16dp"
+                android:hint="@string/search"
+                android:fontFamily="@font/mark_pro_five"
+                android:paddingHorizontal="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tab_layout_category" />
+
+            <ImageButton
+                android:id="@+id/qr"
+                android:layout_width="@dimen/button_ellipse_size"
+                android:layout_height="@dimen/button_ellipse_size"
+                android:layout_marginEnd="21dp"
+                android:background="@drawable/ripple_qr"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_qr"
+                app:layout_constraintBottom_toBottomOf="@+id/search"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/search" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pager_category"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_pager_size"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="21dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <!--не использую BottomNavigation только по тому что судя
+    по макету он должен скрываться на каждом новом экране, тогла смысла от него не много-->
+    <LinearLayout
+        android:id="@+id/bottom_navigate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navigation_size"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_bottom_sheet"
+        android:backgroundTint="@color/new_black"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="67dp"
+        android:transitionName="transition_fragment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/mark_pro_five"
+            android:text="@string/explorer"
+            android:background="@drawable/ripple_bottom_back"
+            android:textColor="@color/background" />
+
+        <ImageButton
+            android:id="@+id/basket_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/ripple_bottom_back"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_basket" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ripple_bottom_back"
+            android:src="@drawable/ic_favorite" />
+
+        <ImageButton
+            android:background="@drawable/ripple_bottom_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_profile" />
+
+    </LinearLayout>
+
+</FrameLayout>
