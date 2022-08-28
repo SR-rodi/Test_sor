@@ -1,7 +1,7 @@
 package com.example.main_screen.presentation.adapters.bestseller
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.core.dto.mainscreen.nesteddto.BestSellerDto
+import com.example.core.dtomodel.mainscreen.nesteddto.BestSellerDto
 
 class DiffUtilBestSeller : DiffUtil.ItemCallback<BestSellerDto>() {
 

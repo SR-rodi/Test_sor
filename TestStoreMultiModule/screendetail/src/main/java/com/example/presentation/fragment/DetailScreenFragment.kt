@@ -14,9 +14,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import com.example.presentation.adapter.DetailInfoAdapter
-import com.example.core.BaseFragment
-import com.example.core.DOLLAR
-import com.example.core.TRANSITION_NAME
+import com.example.core.fragment.BaseFragment
+import com.example.core.tools.DOLLAR
+import com.example.core.tools.TRANSITION_NAME
 import com.example.di.DetailComponentViewModel
 import com.example.navigation.createExtras
 import com.example.presentation.adapter.DetailAdapter

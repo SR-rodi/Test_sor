@@ -1,7 +1,7 @@
 package com.example.basket_screen.presentation.adapter
 
 
-import com.example.core.dto.basketscreen.BasketDto
+import com.example.core.dtomodel.basketscreen.BasketDto
 import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 
 

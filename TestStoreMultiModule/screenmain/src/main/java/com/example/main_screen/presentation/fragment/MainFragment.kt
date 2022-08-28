@@ -1,10 +1,11 @@
 package com.example.main_screen.presentation.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import com.example.core.BaseFragment
-import com.example.core.TRANSITION_NAME
+import com.example.core.fragment.BaseFragment
+import com.example.core.tools.TRANSITION_NAME
 import com.example.main_screen.R
 import com.example.main_screen.databinding.FragmentMainBinding
 import com.example.main_screen.presentation.adapters.pager_adapter.CategoryPagerAdapter
@@ -30,11 +31,14 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        newNavigationClickListener(binding.city,R.id.action_mainFragment_to_mapsFragment)
+
         newNavigationClickListener(binding.filter, R.id.action_mainFragment_to_filterBottomSheetFragment)
 
-        binding.pagerCategory.adapter = CategoryPagerAdapter(
-            this
-        ) {
+        binding.qr.setOnClickListener {
+        }
+
+        binding.pagerCategory.adapter = CategoryPagerAdapter(this) {
             navigate(
                 R.id.action_mainFragment_to_detailScreenFragment,
                 createExtras(binding.bottomNavigate, TRANSITION_NAME)
@@ -52,6 +56,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
         )
     }
 
+    @SuppressLint("InflateParams")
     private fun setUpTabLayout() {
         TabLayoutMediator(binding.tabLayoutCategory, binding.pagerCategory) { tab, position ->
             tab.text = listCategory[position]

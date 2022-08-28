@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.RadioButton
 import androidx.core.content.res.ResourcesCompat
-import com.example.core.BaseFragment
-import com.example.core.dto.detailscreen.DetailInfoDto
+import com.example.core.fragment.BaseFragment
+import com.example.core.dtomodel.detailscreen.DetailInfoDto
 import com.example.screen_detail.R
 import com.example.screen_detail.databinding.FragmentShopBinding
 

@@ -1,11 +1,11 @@
 package com.example.main_screen.domain
 
-import com.example.core.dto.mainscreen.nesteddto.BestSellerDto
-import com.example.core.dto.mainscreen.nesteddto.HotSaleDto
+import com.example.core.dtomodel.mainscreen.nesteddto.BestSellerDto
+import com.example.core.dtomodel.mainscreen.nesteddto.HotSaleDto
 
 interface Repository {
 
-    suspend fun getInfoBestseller():List<BestSellerDto>
+    suspend fun getBestsellerFromNetwork():List<BestSellerDto>
 
-    suspend fun getInfoHotSale():List<HotSaleDto>
+    suspend fun getHotSaleFromNetwork():List<HotSaleDto>
 }

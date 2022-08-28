@@ -1,6 +1,6 @@
 package com.example.di
 
-import com.example.core.Feature
+import com.example.core.tools.Feature
 import com.example.presentation.fragment.DetailScreenFragment
 import dagger.Component
 

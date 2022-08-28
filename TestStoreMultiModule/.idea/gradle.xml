@@ -17,7 +17,9 @@
             <option value="$PROJECT_DIR$/screenbasket" />
             <option value="$PROJECT_DIR$/screendetail" />
             <option value="$PROJECT_DIR$/screenmain" />
+            <option value="$PROJECT_DIR$/screenmap" />
             <option value="$PROJECT_DIR$/storapi" />
+            <option value="$PROJECT_DIR$/storeroomdatabase" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -1,7 +1,7 @@
 package com.example.basket_screen.di
 
 import com.example.basket_screen.presentation.fragment.BasketScreenFragment
-import com.example.core.Feature
+import com.example.core.tools.Feature
 import dagger.Component
 
 //internal интерфейс виден только в модуле в котором лежит

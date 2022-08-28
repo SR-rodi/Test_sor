@@ -1,7 +1,6 @@
-package com.example.main_screen
+package com.example.main_screen.di
 
-import com.example.core.Feature
-import com.example.main_screen.di.MainScreenDependencies
+import com.example.core.tools.Feature
 import com.example.main_screen.presentation.fragment.PhoneFragment
 import dagger.Component
 

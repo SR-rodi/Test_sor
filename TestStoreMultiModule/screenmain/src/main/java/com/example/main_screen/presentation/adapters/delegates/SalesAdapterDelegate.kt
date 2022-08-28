@@ -1,10 +1,11 @@
 package com.example.main_screen.presentation.adapters.delegates
 
 import android.annotation.SuppressLint
-import com.example.core.DOLLAR
-import com.example.core.dto.mainscreen.nesteddto.BestSellerDto
-import com.example.core.dto.mainscreen.nesteddto.HotSaleDto
-import com.example.core.loadingGlide
+import com.example.core.tools.DOLLAR
+import com.example.core.dtomodel.mainscreen.nesteddto.BestSellerDto
+import com.example.core.dtomodel.mainscreen.nesteddto.HotSaleDto
+import com.example.core.tools.loadingGlide
+
 import com.example.main_screen.R
 import com.example.main_screen.databinding.ItemBestSellerBinding
 import com.example.main_screen.databinding.ItemHotSelesBinding

@@ -10,7 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.PagerSnapHelper
-import com.example.core.BaseFragment
+import com.example.core.fragment.BaseFragment
+
 import com.example.main_screen.databinding.FragmentPhoneBinding
 import com.example.main_screen.di.MaineComponentViewModel
 import com.example.main_screen.presentation.adapters.bestseller.BestSellerAdapter

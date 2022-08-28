@@ -12,11 +12,11 @@ import androidx.lifecycle.lifecycleScope
 import com.example.basket_screen.R
 import com.example.basket_screen.di.BasketComponentViewModel
 import com.example.basket_screen.databinding.FragmentBasketScreenBinding
-import com.example.core.DOLLAR
-import com.example.core.TRANSITION_NAME
+import com.example.core.tools.DOLLAR
+import com.example.core.tools.TRANSITION_NAME
 import com.example.navigation.createExtras
 import com.example.basket_screen.presentation.viewModel.BasketViewModel
-import com.example.core.BaseFragment
+import com.example.core.fragment.BaseFragment
 import com.example.basket_screen.presentation.adapter.BasketAdapter
 import com.example.basket_screen.presentation.viewModel.BasketViewModelFactory
 import kotlinx.coroutines.launch
@@ -63,7 +63,6 @@ class BasketScreenFragment :
     private fun bindingInfo() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.isBasket.collect {
-                val a = it.listBasket
                 binding.recyclerBasket.adapter = BasketAdapter(it.listBasket)
                 binding.total.text = DOLLAR + it.total.toString()
                 binding.delivery.text = it.delivery

@@ -1,11 +1,11 @@
-package com.example.teststore.network.api
+package com.example.stor_api.api
 
-import com.example.core.BASE_URL
-import com.example.core.GET_BASKET
-import com.example.core.GET_DETAILS
-import com.example.core.GET_MAINE
-import com.example.core.dto.basketscreen.BasketPhoneDto
-import com.example.core.dto.detailscreen.DetailInfoDto
+import com.example.core.tools.BASE_URL
+import com.example.core.tools.GET_BASKET
+import com.example.core.tools.GET_DETAILS
+import com.example.core.tools.GET_MAINE
+import com.example.core.dtomodel.basketscreen.BasketPhoneDto
+import com.example.core.dtomodel.detailscreen.DetailInfoDto
 import com.example.teststore.network.dto.mainscreen.MainInfoDto
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

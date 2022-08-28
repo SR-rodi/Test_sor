@@ -1,7 +1,7 @@
 package com.example.main_screen.presentation.adapters.hotsales
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.core.dto.mainscreen.nesteddto.HotSaleDto
+import com.example.core.dtomodel.mainscreen.nesteddto.HotSaleDto
 
 class DiffUtilHotSale : DiffUtil.ItemCallback<HotSaleDto>() {
 
