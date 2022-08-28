@@ -9,7 +9,7 @@
         android:name="com.example.main_screen.presentation.fragment.MainFragment"
         android:label="MainFragment">
 
-        <deepLink app:uri="http://testStor.ru/startScreen" />
+        <deepLink app:uri="http://teststore.ru/?curPage=2" />
 
         <action
             android:id="@id/action_mainFragment_to_detailScreenFragment"
@@ -29,7 +29,8 @@
         android:name="com.example.presentation.fragment.DetailScreenFragment"
         android:label="DetailScreenFragment">
 
-        <deepLink app:uri="http://teststor.ru/details" />
+        <deepLink
+            app:uri="http://teststore.ru/?curPage=3" />
 
         <action
             android:id="@+id/action_detailScreenFragment_to_basketScreenFragment"
@@ -49,13 +50,14 @@
         android:name="com.example.basket_screen.presentation.fragment.BasketScreenFragment"
         android:label="BasketScreenFragment">
 
-        <deepLink app:uri="http://testStor.ru/basket" />
-
         <action
             android:id="@id/action_basketScreenFragment_to_mainFragment"
             app:destination="@id/mainFragment"
             app:popUpTo="@id/mainFragment"
             app:popUpToInclusive="true" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="http://teststore.ru/?curPage=1" />
     </fragment>
     <dialog
         android:id="@+id/filterBottomSheetFragment2"
