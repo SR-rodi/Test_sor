@@ -25,6 +25,7 @@ class MapsFragment : Fragment() {
 
     private lateinit var map: GoogleMap
 
+    var needAddMarker = true
 
     private lateinit var fusedClient: FusedLocationProviderClient
     private val launcher =
@@ -40,9 +41,12 @@ class MapsFragment : Fragment() {
             override fun onLocationResult(result: LocationResult) {
                 result.lastLocation?.let { location ->
                     val myLocation = LatLng(location.latitude, location.longitude)
-                    randomMarker(location)
+                    if (needAddMarker) {
+                        needAddMarker = false
+                        randomMarker(location)
+                    }
                     map.animateCamera(CameraUpdateFactory.newLatLngZoom(myLocation, 10f))
-                    Log.e("Mart","Start")
+                    Log.e("Mart", "Start")
                 }
             }
         }
@@ -75,7 +79,7 @@ class MapsFragment : Fragment() {
         fusedClient = LocationServices.getFusedLocationProviderClient(requireActivity())
 
         binding.buttonSearchLocation.setOnClickListener {
-            /*fusedClient.removeLocationUpdates(locationCallback)*/
+            fusedClient.removeLocationUpdates(locationCallback)
             mapFragment?.getMapAsync { googleMap ->
                 checkPermissions(launcher) {
                     isMyLocationEnabled(googleMap)
@@ -83,6 +87,12 @@ class MapsFragment : Fragment() {
                 }
             }
         }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        fusedClient.removeLocationUpdates(locationCallback)
+        needAddMarker = true
     }
 
     private fun randomMarker(location: Location) {
