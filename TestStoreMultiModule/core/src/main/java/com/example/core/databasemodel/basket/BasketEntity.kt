@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 import com.example.core.dtomodel.basketscreen.BasketDto
 
 @Entity(tableName = "basket")
-class BasketEntity(
+data class BasketEntity(
     @PrimaryKey
     @ColumnInfo(name = "id")
     val id: String,

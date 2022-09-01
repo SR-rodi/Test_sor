@@ -1,11 +1,11 @@
 package com.example.teststoremultimodule.di
 
+
 import android.content.Context
+import com.example.stor_api.api.storeApi
 import com.example.storeroomdatabase.basket.AppDataBaseBasket
 import com.example.storeroomdatabase.basket.initBasketDataBase
-
-
-import com.example.stor_api.api.storeApi
+import com.example.core.CoroutinesDispatchersWrapper
 import dagger.Module
 import dagger.Provides
 
@@ -29,6 +29,9 @@ object AppModule {
 
     @Provides
     fun providerBestSellerDao(appDataBase: AppDataBaseBasket) = appDataBase.bestSellerDao()
+
+    @Provides
+    fun providerDispatchers() = CoroutinesDispatchersWrapper()
 
 
 }

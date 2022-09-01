@@ -3,6 +3,7 @@ package com.example.teststoremultimodule.di
 
 import android.content.Context
 import com.example.basket_screen.di.BasketScreenDependencies
+import com.example.core.CoroutinesDispatchersWrapper
 import com.example.core.databasemodel.basket.BasketDao
 import com.example.core.databasemodel.detail.DetailDao
 import com.example.core.databasemodel.main.bestseller.BestSellerDao
@@ -35,6 +36,7 @@ interface AppComponent : MainScreenDependencies,
     override val hotSaleDao: HotSalesDao
     override val baseDetail: DetailDao
     override val baseBasket: BasketDao
+    override val dispatchersWrapper: CoroutinesDispatchersWrapper
     override val store: StoreApi
 }
 
