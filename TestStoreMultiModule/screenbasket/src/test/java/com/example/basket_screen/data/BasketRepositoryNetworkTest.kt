@@ -1,6 +1,5 @@
 package com.example.basket_screen.data
 
-import com.example.core.databasemodel.basket.BasketDao
 import com.example.core.dtomodel.basketscreen.BasketDto
 import com.example.core.dtomodel.basketscreen.BasketPhoneDto
 import com.example.stor_api.api.StoreApi

@@ -35,7 +35,7 @@ fun bestSellerAdapterDelegate(
         { layoutInflater, root -> ItemBestSellerBinding.inflate(layoutInflater, root, false) }
     ) {
 
-        binding.imageView.setOnClickListener {
+        binding.imageViewBestSeller.setOnClickListener {
             clickItem()
         }
 
@@ -44,7 +44,7 @@ fun bestSellerAdapterDelegate(
                 name.text = item.title
                 newPrice.text = DOLLAR + item.discount_price.toString()
                 oldPrice.text = DOLLAR + item.price_without_discount.toString()
-                imageView.loadingGlide(item.picture)
+                imageViewBestSeller.loadingGlide(item.picture)
 
                 if (item.is_favorites) favorite.setImageResource(R.drawable.ic_favorite_)
                 else favorite.setImageResource(R.drawable.ic_frame_favorite)

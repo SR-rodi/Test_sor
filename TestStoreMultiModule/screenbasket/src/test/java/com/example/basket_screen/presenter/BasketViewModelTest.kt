@@ -27,12 +27,11 @@ class BasketViewModelTest {
     private val testDto = BasketPhoneDto(testListBasketDto, "free", "test id", 200)
     private val testEntity = BasketEntity("test id", "free", 200, testListBasketDto)
 
-    @OptIn(ExperimentalCoroutinesApi::class)
     private val viewModelTest by lazy {
         BasketViewModel(
             basketUseCase,
             basketDtaBase,
-            mainDispatcherRule.testDispatcher
+            mainDispatcherRule.testOne
         )
     }
 
@@ -46,6 +45,7 @@ class BasketViewModelTest {
     fun `test Loading view model if Database is not empty`() {
 
         Mockito.`when`(basketDtaBase.getBasketFromDataBase()).thenReturn(testEntity)
+
 
         viewModelTest.getInfo()
 
@@ -89,7 +89,5 @@ class BasketViewModelTest {
 
         Assertions.assertFalse(viewModelTest.isLoading.value)
     }
-
-
 }
 

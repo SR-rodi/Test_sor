@@ -11,12 +11,10 @@ interface DispatchersWrapper {
     val io: CoroutineDispatcher
 }
 
- class CoroutinesDispatchersWrapper : CoroutineDispatcher() {
-     val main = Dispatchers.Main
-     val default= Dispatchers.Default
-     val io = Dispatchers.IO
-     override fun dispatch(context: CoroutineContext, block: Runnable) {
+ class CoroutinesDispatchersWrapper : DispatchersWrapper {
+     override val main = Dispatchers.Main
+     override val default= Dispatchers.Default
+     override val io = Dispatchers.IO
 
-     }
 
  }

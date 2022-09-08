@@ -18,30 +18,22 @@ import kotlinx.coroutines.launch
 class BasketViewModel(
     private val basketUseCase: BasketUseCase,
     private val dataBase: BasketRepositoryDataBase,
-    private val dispatcherIo: CoroutineDispatcher = Dispatchers.IO
+    private val dispatcher: DispatchersWrapper
 ) : BaseViewModel() {
 
     private var _isBasket = MutableSharedFlow<BasketEntity>(replay = 1)
     val isBasket = _isBasket.asSharedFlow()
-     var isDataBaseInfo:BasketEntity? =null
-    var testText ="no create"
 
     fun getInfo() {
-        viewModelScope.launch(handler + dispatcherIo) {
-
+        viewModelScope.launch(handler + dispatcher.io) {
             _isLoading.value = true
-             isDataBaseInfo = dataBase.getBasketFromDataBase()
-
+            val isDataBaseInfo = dataBase.getBasketFromDataBase()
             if (isDataBaseInfo == null) {
-
                 val network = basketUseCase.getBasketFromNetwork()
                 dataBase.addToBasketDataBase(network.toEntity())
-
-               // Log.e("Mart", "грузим с интернета")
                 _isBasket.emit(network.toEntity())
             } else {
-                testText ="is create"
-               _isBasket.emit(isDataBaseInfo!!)
+               _isBasket.emit(isDataBaseInfo)
             }
             _isLoading.value = false
         }

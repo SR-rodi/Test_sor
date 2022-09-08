@@ -8,8 +8,7 @@ import com.example.core.tools.loadingGlide
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
 @SuppressLint("SetTextI18n")
-fun basketAdapterDelegate() =
-    adapterDelegateViewBinding<BasketDto, BasketDto, ItemBasketBinding>(
+fun basketAdapterDelegate() =   adapterDelegateViewBinding<BasketDto, BasketDto, ItemBasketBinding>(
         { layoutInflater, root -> ItemBasketBinding.inflate(layoutInflater, root, false) }
     ) {
         bind {

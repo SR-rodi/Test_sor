@@ -9,6 +9,7 @@
     tools:context=".presentation.fragment.MainFragment">
 
     <ScrollView
+        android:id="@+id/maine_scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
