@@ -30,6 +30,21 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+    }
+    flavorDimensions 'mode'
+    productFlavors {
+        demo {
+            dimension 'mode'
+            applicationIdSuffix '.demo'
+        }
+        full {
+            dimension 'mode'
+        }
+    }
+
 }
 
 dependencies {
