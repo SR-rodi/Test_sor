@@ -8,7 +8,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        minSdk 24
+        minSdk 27
         targetSdk 32
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -33,8 +33,8 @@ android {
 dependencies {
 
 
-    implementation project(':screen_main')
-    implementation project(":stor_api")
+    implementation project(':screenmain')
+    implementation project(':storapi')
     implementation project(":core")
 
 

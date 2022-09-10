@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_mainFragment_to_detailScreenFragment" type="id"/>
+    <item name="action_maineFragment_to_basketFragment" type="id"/>
+    <item name="action_mainFragment_to_filterBottomSheetFragment" type="id"/>
+    <item name="go_back" type="id"/>
+    <item name="action_mainFragment_to_mapsFragment" type="id"/>
+
+</resources>

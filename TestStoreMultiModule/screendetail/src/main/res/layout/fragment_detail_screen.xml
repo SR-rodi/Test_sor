@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/start_animation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="1"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginHorizontal="42dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/go_back"
+                android:layout_width="37dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/ripple_back"
+                android:rotation="90"
+                android:src="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/mark_pro_five"
+                android:gravity="center"
+                android:text="@string/product_details"
+                android:textColor="@color/new_black"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/go_basket"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:background="@drawable/ripple_location"
+                android:backgroundTint="@color/orange"
+                android:src="@drawable/ic_basket"
+                app:layout_constraintBottom_toBottomOf="@id/go_back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/go_back"
+                app:tint="@color/background" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager_detail"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/background"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:paddingHorizontal="75dp" />
+
+            <ProgressBar
+                android:id="@+id/progress_circular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/background_transition"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_bottom_sheet"
+        android:backgroundTint="@color/new_white"
+        android:orientation="vertical"
+        android:transitionName="transition_fragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginHorizontal="37dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:fontFamily="@font/mark_pro_five"
+                android:textColor="@color/new_black"
+                android:textSize="24sp"
+                tools:text="Galaxy Note 20 Ultra" />
+
+            <ImageButton
+                android:id="@+id/favorite"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:background="@drawable/ripple_back"
+                android:src="@drawable/ic_favorite"
+                app:layout_constraintBottom_toBottomOf="@+id/name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/name" />
+        </LinearLayout>
+
+
+        <com.example.core.tools.AppRatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginHorizontal="38dp"
+            android:numStars="5"
+            android:progressDrawable="@drawable/rating_bar_draw"
+            android:rating="2.5"
+            android:stepSize="0.01" />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/table_layout_info"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:tabIconTint="@color/orange" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager_info"
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1"
+            app:layout_constraintTop_toBottomOf="@+id/table_layout_info" />
+
+        <TextView
+            android:id="@+id/button_add"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginHorizontal="29dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ripple_location"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/mark_pro_five"
+            android:gravity="center"
+            android:text="@string/add_to_cart"
+            android:textAllCaps="false"
+            android:textColor="@color/new_white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_pager_info" />
+    </LinearLayout>
+
+
+</LinearLayout>
