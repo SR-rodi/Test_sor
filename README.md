@@ -6,15 +6,15 @@
 - Многомодульность
 - Navigation component
 - Dagger 2
-- Kotlin Corutine
+- Kotlin Corutines
 - Retrofit 2
 - Room
 - MVVM
-- Recycler View, Pager 2, Tab Layout
+- Recycler View, View Pager 2, Tab Layout
 - Deep Link
 - Notifications
 - Transition Animate
-- так же проекту подключен Firebase и Google Maps
+- так же к проекту подключен Firebase и Google Maps
 
 <p float="left">
 <img src="https://github.com/SR-rodi/Test_store/blob/main/TestStoreMultiModule/screen/home.jpg" width=20% height=20%>
